@@ -1,5 +1,8 @@
-import React, { useState } from "react";
 import "./woofFrom.css";
+
+import React, { useState } from "react";
+
+import { PawIcon } from "./branding/PawIcon";
 
 export default function WoofForm() {
   const [woofText, setWoofText] = useState("");
@@ -25,6 +28,7 @@ export default function WoofForm() {
       />
       <br></br>
       <button onClick={handleWoofSubmit} className="postButton">
+        <PawIcon />
         <span className="buttonTextColour">Woof!</span>
       </button>
     </div>

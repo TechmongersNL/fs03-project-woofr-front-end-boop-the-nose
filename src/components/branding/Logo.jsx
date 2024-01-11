@@ -1,10 +1,5 @@
 import React from "react";
 
-type LogoProps = {
-  color?: "black" | "white";
-  width?: number;
-};
-
 /**
  * Woofr Logo
  *
@@ -16,7 +11,7 @@ type LogoProps = {
  * @param width - Width of the logo, defaults to 135.
  * @returns
  */
-export const Logo = ({ color, width }: LogoProps) => {
+export const Logo = ({ color, width }) => {
   const defaultWidth = 135;
   const height = (width || defaultWidth) * 0.75;
 
