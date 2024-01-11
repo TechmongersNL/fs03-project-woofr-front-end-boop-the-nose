@@ -1,0 +1,10 @@
+.loginPage {
+  background-color: rgb(242, 160, 150);
+}
+
+login-form {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: rgba(189, 89, 77, 0.999);
+}
