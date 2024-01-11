@@ -23,7 +23,7 @@ export default function LoginForm() {
       <h3>Woof</h3>
       <form onSubmit={handleSubmit}>
         <label>
-          Email:
+          Email-
           <input
             type="email"
             value={email}
@@ -33,7 +33,7 @@ export default function LoginForm() {
         </label>
         <br />
         <label>
-          Password:
+          Password-
           <input
             type="password"
             value={password}
