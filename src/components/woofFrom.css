@@ -1,0 +1,16 @@
+.woofForm {
+  width: 400px;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.postButton {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(247, 166, 109);
+}
+
+.buttonTextColour {
+  color: rgb(255, 255, 255);
+}
