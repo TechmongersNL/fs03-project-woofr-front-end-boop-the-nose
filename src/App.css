@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+h1 {
+  padding-left: 3%;
+  max-width: 25%;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  border-radius: 25px;
+  border-color: #ff8550;
+  border: 5px;
+  padding-left: 3%;
+  margin-left: 10%;
+  width: 75%;
+  height: 32px;
+  font-weight: lighter;
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.TitleBar {
   color: white;
+  background-color: #ff8550;
+  display: flex;
+  padding-top: 10px;
+  padding-right: auto;
+  padding-left: auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/* .App {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+} */
+
+.InputField {
+  background-color: #ffd1bd;
+  height: 90px;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.LogOut {
+  color: white;
+  display: inline-block;
+  padding-right: 36px;
+}
+
+.WoofButton {
+  height: 52px;
+  width: 125px;
+  color: white;
+  background: #ff8550;
+  border: 0;
+  margin-top: 15px;
+  margin-left: 65%;
+  margin-right: auto;
+  border-radius: 25px;
+  font-size: larger;
+  display: block;
 }
