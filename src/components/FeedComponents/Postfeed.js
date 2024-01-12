@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-// import "./src/Styles/Feedpost.css";
+import UserIcon from "./UserIcon";
 
 const Postfeed = () => {
   const [posts, setPosts] = useState([
@@ -10,6 +9,7 @@ const Postfeed = () => {
       description: "Ama stay down today",
       image:
         "https://sleepycat.in/wp-content/uploads/2021/03/Dog-Bed-original-Grey-PDP-Img-1_.jpg",
+      timestamp: "4 minutes ago",
     },
     {
       id: 2,
@@ -17,6 +17,7 @@ const Postfeed = () => {
       description: "cats taking up my space on the couch",
       image:
         "https://i.pinimg.com/236x/e8/85/61/e8856166f9e04d12bd51b7b35a95b137.jpg",
+      timestamp: "5 minutes ago",
     },
   ]);
   return (
@@ -25,7 +26,11 @@ const Postfeed = () => {
       {posts.map((post) => (
         <ul>
           <li key={post.id}>
-            <h2>{post.author}</h2>
+            <UserIcon />
+            <h2 className="Author">{post.author}</h2>
+            {/* timestamp goes here */}
+            <p className="timestamp">{post.timestamp}</p>
+
             <p>{post.description}</p>
             <img src={post.image} alt="opp" />
           </li>

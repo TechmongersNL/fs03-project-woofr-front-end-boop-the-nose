@@ -1,12 +1,14 @@
 import React from "react";
 import Postfeed from "../components/FeedComponents/Postfeed";
-import Woofbar from "../components/FeedComponents/Woofbar";
+import WoofForm from "../components/FeedComponents/WoofForm";
+import TitleBar from "../components/FeedComponents/TitleBar";
 
 export default function FeedPage() {
   return (
     <div>
-      {/* Added a placeholder for titlebar and woofForm in Woofbar */}
-      <Woofbar />
+      <TitleBar />
+      {/* Added a placeholder for titlebar */}
+      <WoofForm />
       <Postfeed />
     </div>
   );

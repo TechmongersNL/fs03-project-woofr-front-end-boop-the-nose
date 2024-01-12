@@ -2,6 +2,31 @@
   text-align: center;
   padding: 50px;
 }
+
+h2.Author {
+  padding-top: 0;
+  padding-right: 70px;
+  line-height: 10px;
+  display: flex;
+  text-align: left;
+}
+
+.UserIcon {
+  background-color: #ffd1bd;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  /* Need to center the logo still */
+}
+
+PawIcon.UserPaw {
+  padding: 40px;
+}
+
 ul {
   list-style: none;
   padding-top: 10px;
@@ -10,11 +35,12 @@ ul {
 }
 
 li {
-  display: block;
+  display: flexbox;
   border: 1px solid #ffd1bd;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 25px;
+  /* justify-content: space-between; */
 }
 
 h2 {
@@ -22,7 +48,9 @@ h2 {
   height: 44px;
   top: 468px;
   text-align: left;
+  display: flex;
 }
+
 p {
   font-size: 20px;
   font-weight: 400;
@@ -30,6 +58,10 @@ p {
   letter-spacing: 0em;
   text-align: left;
 }
+p.timestamp {
+  text-align: right;
+}
+
 img {
   padding-left: 30px;
   padding-bottom: 10px;

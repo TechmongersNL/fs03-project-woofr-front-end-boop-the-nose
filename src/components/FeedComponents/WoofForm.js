@@ -1,8 +1,6 @@
-import "./woofFrom.css";
-
 import React, { useState } from "react";
 
-import { PawIcon } from "./branding/PawIcon";
+import { PawIcon } from "../branding/PawIcon";
 
 export default function WoofForm() {
   const [woofText, setWoofText] = useState("");
@@ -18,18 +16,17 @@ export default function WoofForm() {
   };
 
   return (
-    <div>
+    <div className="InputField">
       <input
-        className="woofForm"
         type="text"
         value={woofText}
         onChange={handleWoofChange}
-        placeholder="What's up dawg..."
+        placeholder="What's up, Dawg?"
       />
       <br></br>
-      <button onClick={handleWoofSubmit} className="postButton">
-        <PawIcon />
-        <span className="buttonTextColour">Woof!</span>
+      <button className="WoofButton" onClick={handleWoofSubmit}>
+        <PawIcon width={20} />
+        Woof!
       </button>
     </div>
   );
