@@ -19,12 +19,17 @@ export default function LoginForm() {
 
   return (
     <div className="loginPage">
-      <h2>Log in!</h2>
-      <h3>Woof</h3>
+      <div className="backgroundImage"></div>
+      <div className="contentRectangle"></div>
+      <div className="loginText">Woofr</div>
+      <div className="subtext">Unleash Your Inner Dog</div>
+      <h1>Log in</h1>
+      <h3>Woof!</h3>
       <form onSubmit={handleSubmit}>
         <label>
-          Email-
+          Email
           <input
+          className="loginEmail"
             type="email"
             value={email}
             onChange={handleEmailInput}
@@ -33,8 +38,9 @@ export default function LoginForm() {
         </label>
         <br />
         <label>
-          Password-
+          Password
           <input
+            className="loginPassword"
             type="password"
             value={password}
             onChange={handlePasswordInput}
@@ -42,7 +48,7 @@ export default function LoginForm() {
           />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button className="loginButton" type="submit">Log In</button>
       </form>
     </div>
   );
