@@ -1,4 +1,5 @@
-import "./App.css";
+import "./Styles/App.css";
+import "./Styles/Feedpost.css";
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./Pages/Homepage";
