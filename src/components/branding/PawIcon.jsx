@@ -4,6 +4,8 @@ export const PawIcon = ({ color, width }) => {
   const defaultWidth = 40;
   const height = (width || defaultWidth) * 0.95;
 
+  const pawColor = color === "primary" ? "#FF8550" : "white";
+
   return (
     <svg
       width={width || defaultWidth}
@@ -18,7 +20,7 @@ export const PawIcon = ({ color, width }) => {
         rx="8.75434"
         ry="8.71258"
         transform="rotate(-25.2468 21.1261 23.5693)"
-        fill={color || "white"}
+        fill={pawColor}
       />
       <ellipse
         cx="7.40998"
@@ -26,7 +28,7 @@ export const PawIcon = ({ color, width }) => {
         rx="2.99593"
         ry="3.06333"
         transform="rotate(-25.2468 7.40998 22.032)"
-        fill={color || "white"}
+        fill={pawColor}
       />
       <ellipse
         cx="12.0199"
@@ -34,7 +36,7 @@ export const PawIcon = ({ color, width }) => {
         rx="3.54064"
         ry="3.6203"
         transform="rotate(-25.2468 12.0199 12.4686)"
-        fill={color || "white"}
+        fill={pawColor}
       />
       <ellipse
         cx="21.0522"
@@ -42,7 +44,7 @@ export const PawIcon = ({ color, width }) => {
         rx="3.89082"
         ry="3.97835"
         transform="rotate(-25.2468 21.0522 7.8135)"
-        fill={color || "white"}
+        fill={pawColor}
       />
       <ellipse
         cx="30.9086"
@@ -50,7 +52,7 @@ export const PawIcon = ({ color, width }) => {
         rx="3.11265"
         ry="3.18268"
         transform="rotate(-25.2468 30.9086 12.8423)"
-        fill={color || "white"}
+        fill={pawColor}
       />
     </svg>
   );
