@@ -3,7 +3,7 @@ import './Styles/Feedpost.css';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './Pages/Homepage';
 import FeedPage from './Pages/FeedPage';
-import SignUp from './Pages/SignUp';
+import SignUpForm from './Pages/SignUp';
 import LoginForm from './Pages/loginPage';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 				<Route path="/login" element={<LoginForm />} />
 				<Route path="/" element={<HomePage />} />
 				<Route path="/feed" element={<FeedPage />} />
-				<Route path="/signup" element={<SignUp />} />
+				<Route path="/signup" element={<SignUpForm />} />
 			</Routes>
 		</div>
 	);
