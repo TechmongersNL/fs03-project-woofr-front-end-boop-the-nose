@@ -1,66 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { signupThunk } from '../store/Auth/thunks';
+import './SignUp.css';
+import { useNavigate } from 'react-router-dom';
 
-export default function SignUp() {
-	return <div>SignUp</div>;
+export default function SignUpForm() {
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+
+	function handleEmailInput(e) {
+		setEmail(e.target.value);
+	}
+
+	function handlePasswordInput(e) {
+		setPassword(e.target.value);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		//console.log(isSignedUp);
+
+		dispatch(signupThunk(email, password, navigate));
+	}
+
+	return (
+		<div className="SignUpPage">
+			<div className="backgroundImageSignup"></div>
+			<div className="contentRectangle"></div>
+			<div className="signupText">Woofr</div>
+			<div className="subtext">Unleash Your Inner Dog</div>
+			<h1 className="text">Sign Up</h1>
+			<h3 className="text2">create your Woofr account</h3>
+			<form onSubmit={handleSubmit}>
+				<label>
+					Email
+					<input
+						className="signupEmail"
+						type="email"
+						placeholder="owner's email"
+						value={email}
+						onChange={handleEmailInput}
+						required
+					/>
+				</label>
+				<br />
+				<label>
+					Password
+					<input
+						className="signupPassword"
+						type="password"
+						placeholder="password"
+						value={password}
+						onChange={handlePasswordInput}
+						required
+					/>
+				</label>
+				<br />
+				<button className="signupButton" type="submit">
+					Sign up
+				</button>
+			</form>
+		</div>
+	);
 }
-
-// import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { signupThunk } from "../store/auth/thunks";
-// import { useNavigate } from "react-router-dom";
-
-// export default function SignupPage() {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [firstName, setFirstName] = useState("");
-
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//     dispatch(signupThunk(email, password, firstName));
-//     navigate("/login");
-//   }
-
-//   return (
-//     <div style={{ marginLeft: 30 }}>
-//       <h1>Sign up</h1>
-//       <form onSubmit={handleSubmit}>
-//         <p>
-//           <label>
-//             Email:{" "}
-//             <input
-//               type="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </label>
-//         </p>
-//         <p>
-//           <label>
-//             Password:{" "}
-//             <input
-//               type="password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </label>
-//         </p>
-//         <p>
-//           <label>
-//             First name:{" "}
-//             <input
-//               type="name"
-//               value={firstName}
-//               onChange={(e) => setFirstName(e.target.value)}
-//             />
-//           </label>
-//         </p>
-//         <p>
-//           <button type="submit">Sign up</button>
-//         </p>
-//       </form>
-//     </div>
-//   );
-// }
