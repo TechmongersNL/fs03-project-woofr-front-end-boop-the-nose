@@ -1,0 +1,39 @@
+.Landing {
+  background-color: #ffd1bd;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /* border: 5px solid limegreen; */
+}
+
+.LandingTitle {
+  font-size: 272px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top: 10%;
+  left: 25%;
+  z-index: 1;
+  width: min-content;
+}
+.SubTitle {
+  color: white;
+  font-size: 70px;
+  font-weight: 210;
+  position: relative;
+  z-index: 3;
+  top: -25%;
+  left: 18%;
+}
+
+.MainLogo {
+  position: relative;
+  top: -7%;
+  left: 44.8%;
+  z-index: 5;
+  width: min-content;
+}
+
+.MainLogo:hover {
+  cursor: pointer;
+}
