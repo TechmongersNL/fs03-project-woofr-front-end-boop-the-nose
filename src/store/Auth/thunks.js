@@ -16,8 +16,7 @@ export const signupThunk = (email, password, navigate) => {
 			console.log(`${API_URL}/signup`);
 			const data = response.data.email;
 			if (data) {
-				dispatch(signUp(true));
-				console.log('User signed up');
+				dispatch(signUp());
 				navigate('/login');
 			}
 		} catch (e) {
