@@ -3,7 +3,7 @@ import { startLoading, signUp } from './slice';
 
 const API_URL = 'http://127.0.0.1:8000';
 
-export const signupThunk = (email, password) => {
+export const signupThunk = (email, password, navigate) => {
 	return async function thunk(dispatch, getState) {
 		try {
 			dispatch(startLoading());
@@ -14,16 +14,12 @@ export const signupThunk = (email, password) => {
 			});
 
 			console.log(`${API_URL}/signup`);
-			const data = response.data;
-			const jwt = data.token;
-			console.log(jwt);
-
-			console.log('Before setting token to lcoal storage');
-			localStorage.setItem('token', jwt);
-			console.log('After setting token to local storage');
-
-			dispatch(signUp({ accessToken: jwt }));
-			console.log('User signed up');
+			const data = response.data.email;
+			if (data) {
+				dispatch(signUp(true));
+				console.log('User signed up');
+				navigate('/login');
+			}
 		} catch (e) {
 			console.log('Error at signup', e.message);
 		}
