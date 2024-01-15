@@ -1,3 +1,4 @@
+import LoginForm from "./pages/loginPage";
 import "./Styles/App.css";
 import "./Styles/Feedpost.css";
 import { Routes, Route } from "react-router-dom";
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/feed" element={<FeedPage />} />
         <Route path="/signup" element={<SignUp />} />
