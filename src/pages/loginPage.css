@@ -87,3 +87,15 @@
   border-radius: 25px;
   position: absolute;
 }
+
+.text{
+  top: 400px;
+  left: 900px;
+  position: absolute;
+}
+
+.text2{
+  top: 500px;
+  left: 900px;
+  position: absolute;
+}

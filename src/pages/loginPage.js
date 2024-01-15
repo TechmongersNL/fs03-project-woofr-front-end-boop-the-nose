@@ -23,14 +23,15 @@ export default function LoginForm() {
       <div className="contentRectangle"></div>
       <div className="loginText">Woofr</div>
       <div className="subtext">Unleash Your Inner Dog</div>
-      <h1>Log in</h1>
-      <h3>Woof!</h3>
+      <h1 className="text">Log in</h1>
+      <h3 className="text2">Woof!</h3>
       <form onSubmit={handleSubmit}>
         <label>
           Email
           <input
           className="loginEmail"
             type="email"
+            placeholder="owner's email"
             value={email}
             onChange={handleEmailInput}
             required
@@ -42,6 +43,7 @@ export default function LoginForm() {
           <input
             className="loginPassword"
             type="password"
+            placeholder="password"
             value={password}
             onChange={handlePasswordInput}
             required
