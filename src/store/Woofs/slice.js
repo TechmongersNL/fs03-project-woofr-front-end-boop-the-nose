@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  Woofs: "some initial value",
-};
-
 export const woofsSlice = createSlice({
-  name: "Woofs",
-  initialState,
+  name: "woofs",
+  initialState: {
+    woofs: [],
+  },
   reducers: {},
 });
 
