@@ -20,7 +20,7 @@ export const signupThunk = (email, password, navigate) => {
 				navigate('/login');
 			}
 		} catch (e) {
-			console.log('Error at signup', e.message);
+			alert('Please try a different email address or password');
 		}
 	};
 };
