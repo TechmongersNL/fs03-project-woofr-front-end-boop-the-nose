@@ -1,7 +1,14 @@
-import React, { useState } from "react";
 import "./loginPage.css";
 
+import React, { useState } from "react";
+
+import { loginThunk } from "../store/Auth/thunks";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export default function LoginForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,8 +20,7 @@ export default function LoginForm() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Email: ${email}`);
-    console.log(`Password: ${password}`);
+    dispatch(loginThunk(email, password, navigate));
   };
 
   return (
@@ -29,7 +35,7 @@ export default function LoginForm() {
         <label>
           Email
           <input
-          className="loginEmail"
+            className="loginEmail"
             type="email"
             placeholder="owner's email"
             value={email}
@@ -50,7 +56,9 @@ export default function LoginForm() {
           />
         </label>
         <br />
-        <button className="loginButton" type="submit">Log In</button>
+        <button className="loginButton" type="submit">
+          Log In
+        </button>
       </form>
     </div>
   );
