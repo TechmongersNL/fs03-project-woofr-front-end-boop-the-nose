@@ -7,7 +7,6 @@ export default function FeedPage() {
   return (
     <div>
       <TitleBar />
-      {/* Added a placeholder for titlebar */}
       <WoofForm />
       <Postfeed />
     </div>
